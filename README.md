@@ -9,7 +9,7 @@ Key features of this software include server resource monitoring, application mo
 
 ### Basic Installation
 1. Get a (virtual) server. This app is quite demanding and doesn't work well on shared hosting. 1GB RAM is probably enough.
-2. Install a web server and PHP 5.4. We recommend Apache because it's easy to use and doesn't involve writing lots of additional rewrite rules.
+2. Install a web server and PHP 5.5. We recommend Apache because it's easy to use and doesn't involve writing lots of additional rewrite rules.
 3. Install the Phalcon PHP extension.
 4. Clone the repository using Git
 5. Point your web server to the "public" directory
@@ -17,7 +17,7 @@ Key features of this software include server resource monitoring, application mo
 7. Import the SQL file
 8. Add `php /path/to/install/app/cli.php Main` to your crontab to run every 5 minutes
 9. Add `php /path/to/install/app/cli.php Alert` to your crontab to run every 5 minutes
-10. Log in with username "admin" and password "123456" at URL "/admin/login"
+10. Log in with username "admin@nobody.zz" and password "123456" at URL "/admin/login"
 
 ### Additional Steps To Use App Monitoring
 App monitoring uses distributed hosts to poll your application. We used a few DigitalOcean VMs during our testing. If you wish to use this, the steps are:
