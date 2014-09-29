@@ -98,9 +98,9 @@
                             <h3 class="panel-title">Install Monitoring Agent</h3>
                         </div>
                         <strong>CentOS</strong>
-                        <pre style="font-size: 8pt">yum -y install bc parted vmstat; mkdir /var/monitor/; wget -O /var/monitor/cron.sh {{ hostname }}/clients/script?key={{ details.monitor_key }}&pass={{ details.monitor_pass }}"; (crontab -l ; echo "*/5 * * * * bash /var/monitor/cron.sh") | crontab -</pre>
+                        <pre style="font-size: 8pt">yum -y install bc parted vmstat; mkdir /var/monitor/; wget -O /var/monitor/cron.sh "{{ hostname }}/clients/script?key={{ details.monitor_key }}&pass={{ details.monitor_pass }}"; (crontab -l ; echo "*/5 * * * * bash /var/monitor/cron.sh") | crontab -</pre>
                         <strong>Debian/Ubuntu</strong>
-                        <pre style="font-size: 8pt">apt-get install bc parted sysstat; mkdir /var/monitor/; wget -O /var/monitor/cron.sh {{ hostname }}/clients/script?key={{ details.monitor_key }}&pass={{ details.monitor_pass }}"; (crontab -l ; echo "*/5 * * * * bash /var/monitor/cron.sh") | crontab -</pre>
+                        <pre style="font-size: 8pt">apt-get install bc parted sysstat; mkdir /var/monitor/; wget -O /var/monitor/cron.sh "{{ hostname }}/clients/script?key={{ details.monitor_key }}&pass={{ details.monitor_pass }}"; (crontab -l ; echo "*/5 * * * * bash /var/monitor/cron.sh") | crontab -</pre>
                     </div>
                 </div>
             </div>
