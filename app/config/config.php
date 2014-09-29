@@ -30,5 +30,5 @@ return new \Phalcon\Config(array(
             'sgp' => ''
         ),
     ),
-    'url' => 'https://www.servermetrics.me'
+    'url' => 'http://178.62.56.146'
 ));

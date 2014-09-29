@@ -344,7 +344,7 @@ class ClientsController extends ControllerBase
         $request      = new \Phalcon\Http\Request();
         $content      = file_get_contents(__DIR__.'/../scripts/stat_json.sh');
         $config       = $this->getDI()->getServices()['config']->resolve();
-        $replacements = ['__KEY__' => $request->get('key'), '__PASS__' => $request->get('pass'), '__DOMAIN__' => $config->domain];
+        $replacements = ['__KEY__' => $request->get('key'), '__PASS__' => $request->get('pass'), '__DOMAIN__' => $config->url];
 
         foreach($replacements as $old => $new) $content = str_replace($old, $new, $content);
 
