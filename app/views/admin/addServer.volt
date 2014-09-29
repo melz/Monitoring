@@ -56,7 +56,7 @@
         var key  = document.getElementById('monitor_key').value;
         var pass = document.getElementById('monitor_pass').value;
 
-        document.getElementById('centos').innerHTML = 'yum -y install bc parted vmstat; mkdir /var/monitor/; wget -O /var/monitor/cron.sh "http://{{ hostname }}/clients/script?key='+key+'&pass='+pass+'"; (crontab -l ; echo "*/5 * * * * bash /var/monitor/cron.sh") | crontab -';
-        document.getElementById('debian').innerHTML = 'apt-get install bc parted sysstat; mkdir /var/monitor/; wget -O /var/monitor/cron.sh "http://{{ hostname }}/clients/script?key='+key+'&pass='+pass+'"; (crontab -l ; echo "*/5 * * * * bash /var/monitor/cron.sh") | crontab -';
+        document.getElementById('centos').innerHTML = 'yum -y install bc parted vmstat; mkdir /var/monitor/; wget -O /var/monitor/cron.sh {{ hostname }}/clients/script?key='+key+'&pass='+pass+'"; (crontab -l ; echo "*/5 * * * * bash /var/monitor/cron.sh") | crontab -';
+        document.getElementById('debian').innerHTML = 'apt-get install bc parted sysstat; mkdir /var/monitor/; wget -O /var/monitor/cron.sh {{ hostname }}/clients/script?key='+key+'&pass='+pass+'"; (crontab -l ; echo "*/5 * * * * bash /var/monitor/cron.sh") | crontab -';
     </script>
 {% endblock %}
