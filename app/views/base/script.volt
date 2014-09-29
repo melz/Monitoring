@@ -4,7 +4,7 @@
 
 KEY='{{ key }}'
 PASS='{{ pass }}'
-POST_URL='https://www.loadingdeck.com/clients/entry'
+POST_URL='{{ host }}'
 
 LAST_STAT_FILENAME="/tmp/$(basename ${0}).save"
 rm -f "${LAST_STAT_FILENAME}.new"
