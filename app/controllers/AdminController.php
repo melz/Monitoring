@@ -118,6 +118,7 @@ class AdminController extends ControllerBase
             }
         }
         $this->view->serversList = $serversList;
+        $this->view->hostname    = sprintf('http%s://%s', isset($_SERVER['HTTPS'])  ? 's' : '', $_SERVER['HTTP_HOST']);
     }
 
     public function addServerAction()
@@ -140,7 +141,8 @@ class AdminController extends ControllerBase
                 $this->flash->error('Invalid input - please try again');
             }
         }
-        $this->view->form = $form;
+        $this->view->form        = $form;
+        $this->view->hostname    = sprintf('http%s://%s', isset($_SERVER['HTTPS'])  ? 's' : '', $_SERVER['HTTP_HOST']);
     }
 
     public function deleteServerAction()

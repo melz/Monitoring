@@ -4,7 +4,7 @@
 
 KEY='__KEY__'
 PASS='__PASS__'
-POST_URL='http://__DOMAIN__/clients/entry'
+POST_URL='__DOMAIN__/clients/entry'
 
 LAST_STAT_FILENAME="/tmp/$(basename ${0}).save"
 rm -f "${LAST_STAT_FILENAME}.new"

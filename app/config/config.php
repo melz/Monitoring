@@ -6,7 +6,7 @@ return new \Phalcon\Config(array(
 		'host'     => '127.0.0.1',
 		'username' => 'root',
 		'password' => '',
-		'name'     => 'monitoring',
+		'name'     => 'broker',
 	),
 	'application' => array(
 		'controllersDir' => __DIR__ . '/../../app/controllers/',
@@ -30,5 +30,5 @@ return new \Phalcon\Config(array(
             'sgp' => ''
         ),
     ),
-    'url' => 'https://www.servermetrics.me'
+    'url' => 'http://178.62.56.146'
 ));

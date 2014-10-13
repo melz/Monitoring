@@ -12,16 +12,3 @@ Login URL: __URL__/clients/login
 Username: __EMAIL__
 Password: __PASSWORD__
 Max servers: __SERVERS__
-
-Note that we will likely increase your server limit during the beta. The limit is small now to load test the platform.
-
-If you have any feedback, PLEASE submit it - it will help make the service much better: http://community.loadingdeck.com/forum/monitoring. The following additions are currently planned:
- - Predicted metrics
- - Application response time monitoring+intelligence
- - Panic mode
- - API and/or public stats
- - Alert rules
-
-Best regards,
-
-Loading Deck

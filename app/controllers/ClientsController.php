@@ -125,6 +125,7 @@ class ClientsController extends ControllerBase
             }
         }
         $this->view->serversList = $serversList;
+        $this->view->hostname    = sprintf('http%s://%s', isset($_SERVER['HTTPS'])  ? 's' : '', $_SERVER['HTTP_HOST']);
     }
 
     public function addServerAction()
@@ -162,11 +163,11 @@ class ClientsController extends ControllerBase
                     $this->flash->error('Invalid input - please try again');
                 }
             }
-            $this->view->form = $form;
+            $this->view->form        = $form;
+            $this->view->hostname    = sprintf('http%s://%s', isset($_SERVER['HTTPS'])  ? 's' : '', $_SERVER['HTTP_HOST']);
         } else {
             $this->flash->error('You have exhausted your allowance. Please delete a server or upgrade.');
         }
-
     }
 
     public function deleteServerAction()
@@ -343,7 +344,7 @@ class ClientsController extends ControllerBase
         $request      = new \Phalcon\Http\Request();
         $content      = file_get_contents(__DIR__.'/../scripts/stat_json.sh');
         $config       = $this->getDI()->getServices()['config']->resolve();
-        $replacements = ['__KEY__' => $request->get('key'), '__PASS__' => $request->get('pass'), 'url' => $config->domain];
+        $replacements = ['__KEY__' => $request->get('key'), '__PASS__' => $request->get('pass'), '__DOMAIN__' => $config->url];
 
         foreach($replacements as $old => $new) $content = str_replace($old, $new, $content);
 
